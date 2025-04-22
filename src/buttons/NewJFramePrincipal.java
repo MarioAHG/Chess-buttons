@@ -811,6 +811,7 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        jButton5.setName("a1");
         Function.FunctionOfButtons(jButton5);
     }//GEN-LAST:event_jButton5ActionPerformed
 

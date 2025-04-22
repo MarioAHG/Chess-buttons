@@ -17,6 +17,7 @@ public class Function {
     public static Icon iconG = null;
 
     public static void FunctionOfButtons(JButton boton2) {
+        String code = boton2.getName();
         if(boton2!=boton1){
         if (iconG != null) {
             boton2.setIcon(iconG);
