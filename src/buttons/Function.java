@@ -28,6 +28,9 @@ public class Function {
                 boton1 = boton2;
             }
         }
-    }
+    } else{
+            iconG=null;
+            boton1=null;
+        }
     }
 }

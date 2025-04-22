@@ -1,0 +1,12 @@
+public MiFormulario() {
+    initComponents();
+
+    for (int i = 5; i <= 68; i++) {
+        try {
+            JButton btn = (JButton) getClass().getDeclaredField("jButton" + i).get(this);
+            Function.FunctionOfButtons(btn);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
