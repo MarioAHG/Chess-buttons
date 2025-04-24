@@ -10,5 +10,5 @@ package buttons;
  * @author technologyrooms
  */
 public class Memory {
-    public String text="position startpos moves";
+    public static String text="position startpos moves";
 }
