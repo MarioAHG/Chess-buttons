@@ -10,5 +10,7 @@ package buttons;
  * @author technologyrooms
  */
 public class Memory {
+     public static javax.swing.JFrame PlayView = null;
+     public static javax.swing.JFrame HomeView = null;
     public static String text="position startpos moves";
 }

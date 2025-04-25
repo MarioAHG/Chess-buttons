@@ -16,7 +16,7 @@ import javax.swing.JButton;
  * @author technologyrooms
  */
 public class NewJFramePrincipal extends javax.swing.JFrame {
-
+public static int action=0;
     /**
      * Creates new form NewJFramePrincipal
      */
@@ -97,6 +97,8 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
         jButton66 = new javax.swing.JButton();
         jButton67 = new javax.swing.JButton();
         jButton68 = new javax.swing.JButton();
+        Resign = new javax.swing.JButton();
+        GoHome = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -580,6 +582,20 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
             }
         });
 
+        Resign.setText("Resign");
+        Resign.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ResignActionPerformed(evt);
+            }
+        });
+
+        GoHome.setText("Go home");
+        GoHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GoHomeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -719,7 +735,11 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
                             .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(221, Short.MAX_VALUE))
+                .addGap(72, 72, 72)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Resign)
+                    .addComponent(GoHome))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -805,6 +825,12 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(Resign)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(GoHome)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -1130,39 +1156,24 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
         Function.FunctionOfButtons(jButton68);
     }//GEN-LAST:event_jButton68ActionPerformed
 
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFramePrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFramePrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFramePrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFramePrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void ResignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResignActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        action=0;
+        Memory.HomeView.setVisible(true);
+       
+    }//GEN-LAST:event_ResignActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new NewJFramePrincipal().setVisible(true);
-            }
-        });
-    }
+    private void GoHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoHomeActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        action=1;
+        Memory.HomeView.setVisible(true);
+    }//GEN-LAST:event_GoHomeActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton GoHome;
+    private javax.swing.JButton Resign;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
