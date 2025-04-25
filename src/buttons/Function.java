@@ -15,8 +15,16 @@ public class Function {
 
     public static JButton boton1 = null;
     public static Icon iconG = null;
+    public static JButton botonGuardado2=null;
+    public static JButton botonGuardado1=null;
+    public static Icon iconGuardado1=null;
+    public static Icon iconGuardado2=null;
 
     public static void FunctionOfButtons(JButton boton2) {
+        botonGuardado2=boton2;
+        botonGuardado1=boton1;
+        iconGuardado1=iconG;
+        iconGuardado1=boton2.getIcon();
         String code = boton2.getName();
         if(boton2!=boton1){
         if (iconG != null) {

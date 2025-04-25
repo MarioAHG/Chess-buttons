@@ -171,41 +171,55 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="Resign" min="-2" max="-2" attributes="0"/>
                   <Component id="GoHome" min="-2" max="-2" attributes="0"/>
+                  <Component id="Rewind" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="70" max="32767" attributes="0"/>
+              <EmptySpace pref="72" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jButton61" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="jButton62" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="jButton63" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="jButton64" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="jButton65" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="jButton66" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="jButton67" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="jButton68" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jButton61" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="jButton62" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="jButton63" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="jButton64" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="jButton65" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="jButton66" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="jButton67" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="jButton68" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jButton60" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="jButton59" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="jButton58" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="jButton57" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="jButton56" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="jButton55" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="jButton54" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="jButton53" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="Rewind" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Resign" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="GoHome" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jButton60" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="jButton59" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="jButton58" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="jButton57" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="jButton56" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="jButton55" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="jButton54" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="jButton53" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jButton45" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
                   <Component id="jButton46" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
@@ -272,13 +286,6 @@
                   <Component id="jButton5" min="-2" pref="71" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-              <Component id="Resign" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="GoHome" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -1035,6 +1042,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GoHomeActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Rewind">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Rewind"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
