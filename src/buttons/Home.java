@@ -27,38 +27,31 @@ public class Home extends javax.swing.JFrame {
     private void initComponents() {
 
         Play = new javax.swing.JButton();
-        elo = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Play.setText("PlayvsBot (select elo first)");
+        Play.setText("PlayvsBot ");
         Play.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PlayActionPerformed(evt);
             }
         });
 
-        elo.setValue(1500);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(elo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(82, 82, 82)
                 .addComponent(Play)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(271, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Play)
-                    .addComponent(elo, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(239, Short.MAX_VALUE))
+                .addComponent(Play)
+                .addContainerGap(297, Short.MAX_VALUE))
         );
 
         pack();
@@ -66,7 +59,7 @@ public class Home extends javax.swing.JFrame {
 
     private void PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayActionPerformed
         // TODO add your handling code here:
-        
+        Memory.pConfView= new Play_configuration();
         if(NewJFramePrincipal.action==0){
             Function.iconG=null;
             Function.boton1=null;
@@ -76,7 +69,7 @@ public class Home extends javax.swing.JFrame {
         }else{}
         Memory.HomeView = this;
         this.setVisible(false);
-        Memory.PlayView.setVisible(true);
+        Memory.pConfView.setVisible(true);
         
     }//GEN-LAST:event_PlayActionPerformed
 
@@ -87,6 +80,5 @@ public class Home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Play;
-    private javax.swing.JSpinner elo;
     // End of variables declaration//GEN-END:variables
 }

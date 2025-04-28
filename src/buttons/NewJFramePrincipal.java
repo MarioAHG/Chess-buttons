@@ -1189,6 +1189,7 @@ public static int action=0;
         // TODO add your handling code here:
         Function.botonGuardado2.setIcon(Function.iconGuardado2);
         Function.botonGuardado1.setIcon(Function.iconGuardado1);
+        Memory.text=Memory.text.substring(0,Memory.text.length()-5);
     }//GEN-LAST:event_RewindActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
