@@ -24,8 +24,8 @@ public class Function {
         botonGuardado2=boton2;
         botonGuardado1=boton1;
         iconGuardado1=iconG;
-        iconGuardado1=boton2.getIcon();
-        String code = boton2.getName();
+        iconGuardado2=boton2.getIcon();
+        //String code = boton2.getName();
         if(boton2!=boton1){
         if (iconG != null) {
             boton2.setIcon(iconG);

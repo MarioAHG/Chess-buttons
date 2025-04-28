@@ -598,6 +598,11 @@ public static int action=0;
         });
 
         Rewind.setText("Rewind");
+        Rewind.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RewindActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1166,8 +1171,9 @@ public static int action=0;
 
     private void ResignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResignActionPerformed
         // TODO add your handling code here:
-        Function.botonGuardado2.setIcon(Function.iconGuardado2);
-        Function.botonGuardado1.setIcon(Function.iconGuardado1);
+        this.setVisible(false);
+        action=0;
+        Memory.HomeView.setVisible(true);
     
        
     }//GEN-LAST:event_ResignActionPerformed
@@ -1178,6 +1184,12 @@ public static int action=0;
         action=1;
         Memory.HomeView.setVisible(true);
     }//GEN-LAST:event_GoHomeActionPerformed
+
+    private void RewindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RewindActionPerformed
+        // TODO add your handling code here:
+        Function.botonGuardado2.setIcon(Function.iconGuardado2);
+        Function.botonGuardado1.setIcon(Function.iconGuardado1);
+    }//GEN-LAST:event_RewindActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton GoHome;
