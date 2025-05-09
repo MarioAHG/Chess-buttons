@@ -1174,6 +1174,7 @@ public static int action=0;
         this.setVisible(false);
         action=0;
         Memory.HomeView.setVisible(true);
+        Memory.text="position startpos moves";
     
        
     }//GEN-LAST:event_ResignActionPerformed

@@ -31,7 +31,7 @@ public class Function {
             boton2.setIcon(iconG);
             iconG = null;
             boton1.setIcon(null);
-            Memory.text=Memory.text+" "+boton1.getName()+boton2.getName();
+            Memory.text=boton1.getName()+boton2.getName();
             System.out.println(Memory.text);
         } else {
             if (boton2.getIcon() != null) {
