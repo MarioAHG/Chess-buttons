@@ -1,5 +1,9 @@
 package buttons;
 
+import buttons.UCI.UciResult;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.JButton;
 
@@ -19,6 +23,11 @@ public class Function {
     public static JButton botonGuardado1=null;
     public static Icon iconGuardado1=null;
     public static Icon iconGuardado2=null;
+    public static UciResult res=null;
+    public static String st1="";
+    public static String st2="";
+    public static Icon st1Icon =null;
+    public static Icon st2Icon =null;
 
     public static void FunctionOfButtons(JButton boton2) {
         botonGuardado2=boton2;
@@ -32,6 +41,15 @@ public class Function {
             iconG = null;
             boton1.setIcon(null);
             Memory.text=boton1.getName()+boton2.getName();
+            Memory.engine.makeMove(Memory.gameId, Memory.text);
+            try {
+                res = Memory.engine.getBestMove(Memory.gameId, 1000);
+                System.out.println("st:"+res.bestMove);
+            } catch (IOException ex) {
+                Logger.getLogger(Function.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Function.class.getName()).log(Level.SEVERE, null, ex);
+            }
             System.out.println(Memory.text);
         } else {
             if (boton2.getIcon() != null) {
@@ -42,6 +60,13 @@ public class Function {
     } else{
             iconG=null;
             boton1=null;
+        }
+        if(res.bestMove.length()==4){
+            st1=res.bestMove.substring(0,2);
+            st2=res.bestMove.substring(2);
+            //st1Icon=;
+            //st2Icon=;
+            
         }
     }
 }

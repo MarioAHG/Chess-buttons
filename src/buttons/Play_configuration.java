@@ -1,5 +1,9 @@
 package buttons;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -121,9 +125,19 @@ public class Play_configuration extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayActionPerformed
+        int level = (Integer) elo.getValue();
+        try {
+        Memory.engine = new UCI("C:\\Users\\Technologyrooms\\Documents\\NetBeansProjects\\Buttons\\src\\resources\\stockfish\\stockfish-windows-x86-64-avx2.exe");
+        Memory.engine.init();
+        Memory.engine.setElo(level);
+        Memory.gameId = Memory.engine.createGame();
         this.setVisible(false);
         if(Color=="White"){
         Memory.PlayView.setVisible(true);}
+        } catch (Exception ex) {
+            Logger.getLogger(Play_configuration.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }//GEN-LAST:event_PlayActionPerformed
                                             
 

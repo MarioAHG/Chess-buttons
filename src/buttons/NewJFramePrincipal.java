@@ -16,12 +16,90 @@ import javax.swing.JButton;
  * @author technologyrooms
  */
 public class NewJFramePrincipal extends javax.swing.JFrame {
-public static int action=0;
+
+    public static int action = 0;
+
     /**
      * Creates new form NewJFramePrincipal
      */
     public NewJFramePrincipal() {
         initComponents();
+        setHashMap();
+    }
+
+    public void setHashMap() {
+        Memory.names.put("a1", jButton5);
+        Memory.names.put("b1", jButton6);
+        Memory.names.put("c1", jButton7);
+        Memory.names.put("d1", jButton8);
+        Memory.names.put("e1", jButton9);
+        Memory.names.put("f1", jButton10);
+        Memory.names.put("g1", jButton11);
+        Memory.names.put("h1", jButton12);
+
+        Memory.names.put("a2", jButton13);
+        Memory.names.put("b2", jButton14);
+        Memory.names.put("c2", jButton15);
+        Memory.names.put("d2", jButton16);
+        Memory.names.put("e2", jButton17);
+        Memory.names.put("f2", jButton18);
+        Memory.names.put("g2", jButton19);
+        Memory.names.put("h2", jButton20);
+
+        Memory.names.put("a3", jButton21);
+        Memory.names.put("b3", jButton22);
+        Memory.names.put("c3", jButton23);
+        Memory.names.put("d3", jButton24);
+        Memory.names.put("e3", jButton25);
+        Memory.names.put("f3", jButton26);
+        Memory.names.put("g3", jButton27);
+        Memory.names.put("h3", jButton28);
+
+        Memory.names.put("a4", jButton29);
+        Memory.names.put("b4", jButton30);
+        Memory.names.put("c4", jButton31);
+        Memory.names.put("d4", jButton32);
+        Memory.names.put("e4", jButton33);
+        Memory.names.put("f4", jButton34);
+        Memory.names.put("g4", jButton35);
+        Memory.names.put("h4", jButton36);
+
+        Memory.names.put("a5", jButton37);
+        Memory.names.put("b5", jButton38);
+        Memory.names.put("c5", jButton39);
+        Memory.names.put("d5", jButton40);
+        Memory.names.put("e5", jButton41);
+        Memory.names.put("f5", jButton42);
+        Memory.names.put("g5", jButton43);
+        Memory.names.put("h5", jButton44);
+
+        Memory.names.put("a6", jButton45);
+        Memory.names.put("b6", jButton46);
+        Memory.names.put("c6", jButton47);
+        Memory.names.put("d6", jButton48);
+        Memory.names.put("e6", jButton49);
+        Memory.names.put("f6", jButton50);
+        Memory.names.put("g6", jButton51);
+        Memory.names.put("h6", jButton52);
+
+        Memory.names.put("a7", jButton53);
+        Memory.names.put("b7", jButton54);
+        Memory.names.put("c7", jButton55);
+        Memory.names.put("d7", jButton56);
+        Memory.names.put("e7", jButton57);
+        Memory.names.put("f7", jButton58);
+        Memory.names.put("g7", jButton59);
+        Memory.names.put("h7", jButton60);
+
+        Memory.names.put("a8", jButton61);
+        Memory.names.put("b8", jButton62);
+        Memory.names.put("c8", jButton63);
+        Memory.names.put("d8", jButton64);
+        Memory.names.put("e8", jButton65);
+        Memory.names.put("f8", jButton66);
+        Memory.names.put("g8", jButton67);
+        Memory.names.put("h8", jButton68);
+
     }
 
     /**
@@ -900,82 +978,82 @@ public static int action=0;
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-         jButton15.setName("c2");
+        jButton15.setName("c2");
         Function.FunctionOfButtons(jButton15);
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-         jButton16.setName("d2");
+        jButton16.setName("d2");
         Function.FunctionOfButtons(jButton16);
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-         jButton17.setName("e2");
-         Function.FunctionOfButtons(jButton17);
+        jButton17.setName("e2");
+        Function.FunctionOfButtons(jButton17);
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-         jButton18.setName("f2");
+        jButton18.setName("f2");
         Function.FunctionOfButtons(jButton18);
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
-         jButton19.setName("g2");
+        jButton19.setName("g2");
         Function.FunctionOfButtons(jButton19);
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-         jButton20.setName("h2");
+        jButton20.setName("h2");
         Function.FunctionOfButtons(jButton20);
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-         jButton21.setName("a3");
+        jButton21.setName("a3");
         Function.FunctionOfButtons(jButton21);
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-         jButton22.setName("b3");
+        jButton22.setName("b3");
         Function.FunctionOfButtons(jButton22);
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
-         jButton23.setName("c3");
+        jButton23.setName("c3");
         Function.FunctionOfButtons(jButton23);
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
-         jButton24.setName("d3");
+        jButton24.setName("d3");
         Function.FunctionOfButtons(jButton24);
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-         jButton25.setName("e3");
+        jButton25.setName("e3");
         Function.FunctionOfButtons(jButton25);
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
-         jButton26.setName("f3");
+        jButton26.setName("f3");
         Function.FunctionOfButtons(jButton26);
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
-         jButton27.setName("g3");
+        jButton27.setName("g3");
         Function.FunctionOfButtons(jButton27);
     }//GEN-LAST:event_jButton27ActionPerformed
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
-         jButton28.setName("h3");
+        jButton28.setName("h3");
         Function.FunctionOfButtons(jButton28);
     }//GEN-LAST:event_jButton28ActionPerformed
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
-         jButton29.setName("a4");
+        jButton29.setName("a4");
         Function.FunctionOfButtons(jButton29);
     }//GEN-LAST:event_jButton29ActionPerformed
 
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
-         jButton30.setName("b4");
+        jButton30.setName("b4");
         Function.FunctionOfButtons(jButton30);
     }//GEN-LAST:event_jButton30ActionPerformed
 
@@ -1010,12 +1088,12 @@ public static int action=0;
     }//GEN-LAST:event_jButton36ActionPerformed
 
     private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
-         jButton37.setName("a5");
+        jButton37.setName("a5");
         Function.FunctionOfButtons(jButton37);
     }//GEN-LAST:event_jButton37ActionPerformed
 
     private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
-       jButton38.setName("b5");
+        jButton38.setName("b5");
         Function.FunctionOfButtons(jButton38);
     }//GEN-LAST:event_jButton38ActionPerformed
 
@@ -1030,12 +1108,13 @@ public static int action=0;
     }//GEN-LAST:event_jButton40ActionPerformed
 
     private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
-       jButton41.setName("e5");
+        jButton41.setName("e5");
         Function.FunctionOfButtons(jButton41);
     }//GEN-LAST:event_jButton41ActionPerformed
 
     private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
         jButton42.setName("f5");
+
         Function.FunctionOfButtons(jButton42);
     }//GEN-LAST:event_jButton42ActionPerformed
 
@@ -1095,17 +1174,17 @@ public static int action=0;
     }//GEN-LAST:event_jButton53ActionPerformed
 
     private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
-         jButton54.setName("b7");
+        jButton54.setName("b7");
         Function.FunctionOfButtons(jButton54);
     }//GEN-LAST:event_jButton54ActionPerformed
 
     private void jButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton55ActionPerformed
-         jButton55.setName("c7");
+        jButton55.setName("c7");
         Function.FunctionOfButtons(jButton55);
     }//GEN-LAST:event_jButton55ActionPerformed
 
     private void jButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton56ActionPerformed
-         jButton56.setName("d7");
+        jButton56.setName("d7");
         Function.FunctionOfButtons(jButton56);
     }//GEN-LAST:event_jButton56ActionPerformed
 
@@ -1115,27 +1194,27 @@ public static int action=0;
     }//GEN-LAST:event_jButton57ActionPerformed
 
     private void jButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton58ActionPerformed
-         jButton58.setName("f7");
+        jButton58.setName("f7");
         Function.FunctionOfButtons(jButton58);
     }//GEN-LAST:event_jButton58ActionPerformed
 
     private void jButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton59ActionPerformed
-         jButton59.setName("g7");
+        jButton59.setName("g7");
         Function.FunctionOfButtons(jButton59);
     }//GEN-LAST:event_jButton59ActionPerformed
 
     private void jButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton60ActionPerformed
-         jButton60.setName("h7");
+        jButton60.setName("h7");
         Function.FunctionOfButtons(jButton60);
     }//GEN-LAST:event_jButton60ActionPerformed
 
     private void jButton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton61ActionPerformed
-         jButton61.setName("a8");
+        jButton61.setName("a8");
         Function.FunctionOfButtons(jButton61);
     }//GEN-LAST:event_jButton61ActionPerformed
 
     private void jButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62ActionPerformed
-         jButton62.setName("b8");
+        jButton62.setName("b8");
         Function.FunctionOfButtons(jButton62);
     }//GEN-LAST:event_jButton62ActionPerformed
 
@@ -1172,17 +1251,17 @@ public static int action=0;
     private void ResignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResignActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        action=0;
+        action = 0;
         Memory.HomeView.setVisible(true);
-        Memory.text="position startpos moves";
-    
-       
+        //Memory.text="position startpos moves";
+
+
     }//GEN-LAST:event_ResignActionPerformed
 
     private void GoHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoHomeActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        action=1;
+        action = 1;
         Memory.HomeView.setVisible(true);
     }//GEN-LAST:event_GoHomeActionPerformed
 
@@ -1190,7 +1269,7 @@ public static int action=0;
         // TODO add your handling code here:
         Function.botonGuardado2.setIcon(Function.iconGuardado2);
         Function.botonGuardado1.setIcon(Function.iconGuardado1);
-        Memory.text=Memory.text.substring(0,Memory.text.length()-5);
+        // Memory.text=Memory.text.substring(0,Memory.text.length()-5);
     }//GEN-LAST:event_RewindActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

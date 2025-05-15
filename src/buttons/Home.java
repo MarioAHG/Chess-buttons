@@ -59,6 +59,7 @@ public class Home extends javax.swing.JFrame {
 
     private void PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayActionPerformed
         // TODO add your handling code here:
+        
         Memory.pConfView= new Play_configuration();
         if(NewJFramePrincipal.action==0){
             Function.iconG=null;
