@@ -28,6 +28,7 @@ public class Function {
     public static String st2="";
     public static Icon st1Icon =null;
     public static Icon st2Icon =null;
+    public static boolean stockfishplayed=false;
 
     public static void FunctionOfButtons(JButton boton2) {
         botonGuardado2=boton2;
@@ -41,16 +42,19 @@ public class Function {
             iconG = null;
             boton1.setIcon(null);
             Memory.text=boton1.getName()+boton2.getName();
-            Memory.engine.makeMove(Memory.gameId, Memory.text);
             try {
+                Memory.engine.makeMove(Memory.gameId, Memory.text);
                 res = Memory.engine.getBestMove(Memory.gameId, 1000);
-                System.out.println("st:"+res.bestMove);
+                Memory.engine.makeMove(Memory.gameId, res.bestMove);
+                stockfishplayed=true;
             } catch (IOException ex) {
                 Logger.getLogger(Function.class.getName()).log(Level.SEVERE, null, ex);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Function.class.getName()).log(Level.SEVERE, null, ex);
             }
             System.out.println(Memory.text);
+            System.out.println("st:"+res.bestMove);
+            System.out.println("gid:"+Memory.gameId);
         } else {
             if (boton2.getIcon() != null) {
                 iconG = boton2.getIcon();
@@ -61,12 +65,14 @@ public class Function {
             iconG=null;
             boton1=null;
         }
-        if(res.bestMove.length()==4){
+        if(res != null && res.bestMove.length()==4&&stockfishplayed==true){
             st1=res.bestMove.substring(0,2);
             st2=res.bestMove.substring(2);
-            //st1Icon=;
-            //st2Icon=;
-            
+            st1Icon=Memory.names.get(st1).getIcon();
+            Memory.names.get(st1).setIcon(null);
+            st2Icon=Memory.names.get(st2).getIcon();
+            Memory.names.get(st2).setIcon(st1Icon);
+            stockfishplayed=false;   
         }
     }
 }
