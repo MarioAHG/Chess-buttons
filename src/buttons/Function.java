@@ -38,6 +38,8 @@ public class Function {
         //String code = boton2.getName();
         if(boton2!=boton1){
         if (iconG != null) {
+            Reglas.Castle(boton1, boton2);
+            Reglas.En(boton1, boton2);
             boton2.setIcon(iconG);
             iconG = null;
             boton1.setIcon(null);
@@ -72,7 +74,7 @@ public class Function {
             Memory.names.get(st1).setIcon(null);
             st2Icon=Memory.names.get(st2).getIcon();
             Memory.names.get(st2).setIcon(st1Icon);
-            stockfishplayed=false;   
+            stockfishplayed=false;
         }
     }
 }
