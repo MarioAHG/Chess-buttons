@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.Icon;
 import javax.swing.JButton;
+import javax.swing.ImageIcon;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -34,6 +35,34 @@ public class Memory {
         }
         posiciones.add(Pos);
     }
+//    public static Icon[] iconosBlancas={
+//        new ImageIcon(Memory.class.getResource("/resources/Wp00.png")),
+//        new ImageIcon(Memory.class.getResource("/resources/Wk00.png")),
+//        new ImageIcon(Memory.class.getResource("/resources/Wb00.png")),
+//        new ImageIcon(Memory.class.getResource("/resources/Wq00.png")),
+//        new ImageIcon(Memory.class.getResource("/resources/Wr00.png")),
+//        new ImageIcon(Memory.class.getResource("/resources/Wki00.png"))
+//        
+//    };
+    public static boolean contieneBlanca(JButton boton, JButton boton1){
+        
+        boolean res=false;
+        if(boton.getIcon()!=null&&boton1!=null){
+        if(((ImageIcon)boton.getIcon()).getDescription().contains("Wp00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Wk00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Wb00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Wq00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Wr00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Wki00.png")){
+            res=true;
+        }}
+        return res;
+    }
+//     public static ArrayList<Icon> iconosNegras = new ArrayList<>();
+//
+//    static {
+//        iconosBlancas.add(new ImageIcon(Memory.class.getResource("/buttons/resources/Bb00.png")));
+//        iconosBlancas.add(new ImageIcon(Memory.class.getResource("/buttons/resources/Bk00.png")));
+//        iconosBlancas.add(new ImageIcon(Memory.class.getResource("/buttons/resources/Bki00.png")));
+//        iconosBlancas.add(new ImageIcon(Memory.class.getResource("/buttons/resources/Bp00.png")));
+//        iconosBlancas.add(new ImageIcon(Memory.class.getResource("/buttons/resources/Bq00.png")));
+//        iconosBlancas.add(new ImageIcon(Memory.class.getResource("/buttons/resources/Br00.png")));
+//    };
     //public static boolean rewindMaked = true;
 
 }

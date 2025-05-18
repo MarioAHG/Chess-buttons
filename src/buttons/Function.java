@@ -6,6 +6,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -36,7 +37,15 @@ public class Function {
         //iconGuardado1=iconG;
         //iconGuardado2=boton2.getIcon();
         //String code = boton2.getName();
-        if(boton2!=boton1){
+        boolean bo=false;
+        if(boton1!=null){
+            bo=Memory.contieneBlanca(boton2,boton1);
+            //System.out.println("Icono1::"+boton1.getIcon());
+        }
+        //System.out.println("Icono2::"+boton2.getIcon());
+        //System.out.println(Memory.iconosBlancas);
+        //JOptionPane.showMessageDialog(null, "icono", "icono", JOptionPane.INFORMATION_MESSAGE, Memory.iconosBlancas.get(0));
+        if(boton2!=boton1&&bo==false){
         if (iconG != null) {
             Memory.text=boton1.getName()+boton2.getName();
             Memory.engine.makeMove(Memory.gameId, Memory.text);
@@ -46,6 +55,8 @@ public class Function {
             boton2.setIcon(iconG);
             iconG = null;
             boton1.setIcon(null);
+            //
+            boton1=null;
             //System.out.println(boton1.getIcon());
             System.out.println(Memory.text);
             try {
@@ -61,6 +72,7 @@ public class Function {
             System.out.println("st:"+res.bestMove);
             //System.out.println("gid:"+Memory.gameId);
             }else{
+                JOptionPane.showMessageDialog(null,Memory.text,"Movimiento ilegal",JOptionPane.INFORMATION_MESSAGE);
                 iconG=null;
                 boton1=null;
                 System.out.println("ILEGAL MOVEMENT");
@@ -72,10 +84,20 @@ public class Function {
             }
         }
     } else{
+            if(bo){
+            System.out.println("It contains it");
+            iconG=boton2.getIcon();
+            boton1=boton2;
+            boton1.setIcon(boton2.getIcon());
+            
+            bo=false;
+            }else{
+            if(boton2==boton1){
             iconG=null;
-            boton1=null;
+            boton1=null;}}
         }
         if(res != null && res.bestMove.length()==4&&stockfishplayed==true){
+            //System.out.println("Entered");
             st1=res.bestMove.substring(0,2);
             st2=res.bestMove.substring(2);
             st1Icon=Memory.names.get(st1).getIcon();
@@ -84,7 +106,10 @@ public class Function {
             Memory.names.get(st2).setIcon(st1Icon);
             stockfishplayed=false;
             Memory.guardarPosicion();
+            //boton1=null;
             //Memory.rewindMaked=false;
         }
+        //System.out.println("iconG:"+iconG);
+        //System.out.println("boton1:"+boton1);
     }
 }

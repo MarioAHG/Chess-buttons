@@ -273,7 +273,7 @@ public class UCI {
         System.out.println(moves);
         moves.remove(moves.size()-1);
         moves.remove(moves.size()-1);
-        System.out.println(moves);
+        //System.out.println(moves);
     }
 }
 
