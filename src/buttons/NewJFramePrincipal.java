@@ -1267,9 +1267,24 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
 
     private void RewindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RewindActionPerformed
         // TODO add your handling code here:
-        Function.botonGuardado2.setIcon(Function.iconGuardado2);
-        Function.botonGuardado1.setIcon(Function.iconGuardado1);
-        // Memory.text=Memory.text.substring(0,Memory.text.length()-5);
+//        if(Memory.rewindMaked==false){
+//        Function.botonGuardado2.setIcon(Function.iconGuardado2);
+//        Function.botonGuardado1.setIcon(Function.iconGuardado1);
+//        Memory.names.get(Function.st1).setIcon(Function.st1Icon);
+//        Memory.names.get(Function.st2).setIcon(Function.st2Icon);
+//        Memory.engine.rewindCode(Memory.gameId);
+//        Function.iconG=null;
+//        Function.boton1=null;}
+//        Memory.rewindMaked=true;
+        // //Memory.text=Memory.text.substring(0,Memory.text.length()-5);
+        if(Memory.posiciones.size()>1){
+        Memory.engine.rewindCode(Memory.gameId);
+        Memory.posiciones.remove(Memory.posiciones.size() - 1);
+        int i = 0;
+        for (String key : Memory.names.keySet()) {
+            Memory.names.get(key).setIcon(Memory.posiciones.get(Memory.posiciones.size() - 1)[i]);
+            i = i + 1;
+        }}
     }//GEN-LAST:event_RewindActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

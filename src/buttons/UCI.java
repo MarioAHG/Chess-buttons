@@ -6,6 +6,7 @@ package buttons;
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.*;
+import java.util.ArrayList;
 /**
  *
  * @author technologyrooms
@@ -27,8 +28,8 @@ public class UCI {
 
     // Internal representation of a game: list of moves from start position
     private static class GameState {
-        final List<String> moves = new ArrayList<>();
-        final List<String> currentFenBoard = new ArrayList<>();
+        List<String> moves = new ArrayList<>();
+        List<String> currentFenBoard = new ArrayList<>();
     }
 
     /**
@@ -234,6 +235,45 @@ public class UCI {
         }
         process.waitFor();
         outputReaderThread.interrupt();
+    }
+    //ilegal moves
+    public boolean ilegalmoves(String gameId){
+        try{
+        GameState gs = games.get(gameId);
+        if (gs == null) throw new IllegalArgumentException("Unknown game ID: " + gameId);
+        List<String> moves = gs.moves;
+        String lastMove=moves.get(moves.size()-1);
+        moves.remove(moves.size()-1);
+        List<String> tableroAnterior=getBoardDisplay(gameId);
+        Memory.engine.makeMove(gameId, lastMove);
+        List<String> tableroActual=getBoardDisplay(gameId);
+        boolean eq=true;
+        for(int i=0;i<tableroAnterior.size();i++){
+            if(!tableroAnterior.get(i).equals(tableroActual.get(i))){
+                eq=false;
+            }
+        }
+        if(eq==true){
+           //System.out.println("Moves1:"+moves);
+            moves.remove(moves.size()-1);
+        }
+        //System.out.println("Moves2:"+moves);
+        return eq;
+        }catch( Exception e){
+            System.out.println("Error in legal moves");
+            System.out.println(e);
+            return true;
+        }
+        
+    }
+    public void rewindCode(String gameId){
+      GameState gs = games.get(gameId);
+        if (gs == null) throw new IllegalArgumentException("Unknown game ID: " + gameId);
+        List<String> moves = gs.moves;
+        System.out.println(moves);
+        moves.remove(moves.size()-1);
+        moves.remove(moves.size()-1);
+        System.out.println(moves);
     }
 }
 

@@ -39,6 +39,7 @@ public class Play_configuration extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         Play = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,11 +57,13 @@ public class Play_configuration extends javax.swing.JFrame {
             }
         });
 
+        elo.setModel(new javax.swing.SpinnerNumberModel(1500, 1350, 2850, 10));
+        elo.setOpaque(true);
         elo.setValue(1500);
 
         jLabel1.setText("Color");
 
-        jLabel2.setText("Elo");
+        jLabel2.setText("Elo (1350-2850)");
 
         Play.setText("Play");
         Play.addActionListener(new java.awt.event.ActionListener() {
@@ -78,22 +81,26 @@ public class Play_configuration extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jRadioButton2)
-                                .addComponent(jRadioButton1)))
-                        .addGap(44, 44, 44))
-                    .addComponent(jLabel2)
-                    .addComponent(elo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(Play)
+                                .addComponent(jRadioButton1))
+                            .addComponent(jLabel2)
+                            .addComponent(elo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(Play))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(165, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -125,19 +132,25 @@ public class Play_configuration extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayActionPerformed
+        if(Color!=null){
         int level = (Integer) elo.getValue();
         try {
-        Memory.engine = new UCI("C:\\Users\\Technologyrooms\\Documents\\NetBeansProjects\\Buttons\\src\\resources\\stockfish\\stockfish-windows-x86-64-avx2.exe");
+        Memory.engine = new UCI("\"C:\\Users\\Mario\\Desktop\\Mario X\\Programación\\Chess-buttons\\src\\resources\\stockfish\\stockfish-windows-x86-64-avx2.exe\"");
         Memory.engine.init();
         Memory.engine.setElo(level);
         Memory.gameId = Memory.engine.createGame();
         this.setVisible(false);
+        Memory.guardarPosicion();
+        jLabel3.setText("");
         if(Color=="White"){
-        Memory.PlayView.setVisible(true);}
+        Memory.PlayView.setVisible(true);
+        Color=null;}
         } catch (Exception ex) {
             Logger.getLogger(Play_configuration.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        }else{
+            jLabel3.setText("(Select a color)");
+        }
     }//GEN-LAST:event_PlayActionPerformed
                                             
 
@@ -182,6 +195,7 @@ public class Play_configuration extends javax.swing.JFrame {
     private javax.swing.JSpinner elo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     // End of variables declaration//GEN-END:variables
