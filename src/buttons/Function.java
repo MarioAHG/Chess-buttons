@@ -48,11 +48,24 @@ public class Function {
         if(boton2!=boton1&&bo==false){
         if (iconG != null) {
             Memory.text=boton1.getName()+boton2.getName();
+            ////////CORONACIÓN
+            if(Memory.toPromote){
+                //Memory.toPromote=false;
+                Memory.text=Memory.text+NewJFramePrincipal.addProm;
+                //NewJFramePrincipal.addProm="";
+            }
+            System.out.println("///////////"+Memory.text);
             Memory.engine.makeMove(Memory.gameId, Memory.text);
+            ////////CORONACIÓN
             if(Memory.engine.ilegalmoves(Memory.gameId)==false){
             Reglas.Castle(boton1, boton2);
             Reglas.En(boton1, boton2);
-            boton2.setIcon(iconG);
+            Reglas.Promotion(boton2);
+            if(Memory.toPromote){
+                NewJFramePrincipal.addProm="";
+                Memory.toPromote=false;
+            }else{
+            boton2.setIcon(iconG);}
             iconG = null;
             boton1.setIcon(null);
             //
@@ -75,6 +88,8 @@ public class Function {
                 JOptionPane.showMessageDialog(null,Memory.text,"Movimiento ilegal",JOptionPane.INFORMATION_MESSAGE);
                 iconG=null;
                 boton1=null;
+                NewJFramePrincipal.addProm="";
+                Memory.toPromote=false;
                 System.out.println("ILEGAL MOVEMENT");
             }
         } else {
@@ -100,6 +115,11 @@ public class Function {
             //System.out.println("Entered");
             st1=res.bestMove.substring(0,2);
             st2=res.bestMove.substring(2);
+            System.out.println("1:"+st1);
+            System.out.println("2:"+st2);
+            //System.out.println(Memory.names.get(st1));
+            //Reglas.Castle(Memory.names.get("e8"),Memory.names.get("h8"));
+            //Reglas.En(Memory.names.get(st1), Memory.names.get(st2));
             st1Icon=Memory.names.get(st1).getIcon();
             Memory.names.get(st1).setIcon(null);
             //st2Icon=Memory.names.get(st2).getIcon();

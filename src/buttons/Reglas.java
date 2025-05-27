@@ -1,6 +1,7 @@
 package buttons;
 
 
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
@@ -15,11 +16,14 @@ import javax.swing.JButton;
  */
 public class Reglas {
     public static void Castle(JButton boton1 , JButton boton2){
-          if((boton1.getName()+boton2.getName()).equals("e1g1")&& ((ImageIcon)boton1.getIcon()).getDescription().contains("Wki00.png")&&((ImageIcon) Memory.names.get("a1").getIcon()).getDescription().contains("Wr00.png")){
+        //LAS CORRECIONES FUERON:
+        //h1aa1(en condiciones)
+        //a1ah1(en condiciones)
+          if((boton1.getName()+boton2.getName()).equals("e1g1")&& ((ImageIcon)boton1.getIcon()).getDescription().contains("Wki00.png")&&((ImageIcon) Memory.names.get("h1").getIcon()).getDescription().contains("Wr00.png")){
                 Memory.names.get("f1").setIcon( Memory.names.get("h1").getIcon());
                  Memory.names.get("h1").setIcon(null);        
             }
-            if((boton1.getName()+boton2.getName()).equals("e1c1")&& ((ImageIcon)boton1.getIcon()).getDescription().contains("Wki00.png")&&((ImageIcon) Memory.names.get("h1").getIcon()).getDescription().contains("Wr00.png")){
+            if((boton1.getName()+boton2.getName()).equals("e1c1")&& ((ImageIcon)boton1.getIcon()).getDescription().contains("Wki00.png")&&((ImageIcon) Memory.names.get("a1").getIcon()).getDescription().contains("Wr00.png")){
                  Memory.names.get("d1").setIcon( Memory.names.get("a1").getIcon());
                  Memory.names.get("a1").setIcon(null);        
             }
@@ -51,4 +55,49 @@ public class Reglas {
 //    }
         
        }
+    //CUANDO PONGO LO DE ABAJO ME SALE ERROR
+    //public static ImageIcon reinaIcon = new ImageIcon(Reglas.class.getResource("/Wq00.png"));
+    public static void Promotion(JButton boton2){
+        if(Memory.toPromote==true){
+         if(NewJFramePrincipal.addProm.equals("q")){
+        boton2.setIcon(Memory.iconos[3]);
+        }
+         if(NewJFramePrincipal.addProm.equals("r")){
+        boton2.setIcon(Memory.iconos[0]);
+        }
+         if(NewJFramePrincipal.addProm.equals("k")){
+        boton2.setIcon(Memory.iconos[1]);
+        }
+         if(NewJFramePrincipal.addProm.equals("b")){
+        boton2.setIcon(Memory.iconos[2]);
+        }
+        }
+    }
+////    public static ImageIcon reinaIcon = new ImageIcon(Reglas.class.getResource("/Wq00.png"));
+////        public static ImageIcon torreIcon = new ImageIcon(Reglas.class.getResource("/Wr00.png"));
+////        public static ImageIcon alfilIcon = new ImageIcon(Reglas.class.getResource("/Wb00.png"));
+////        public static ImageIcon caballoIcon = new ImageIcon(Reglas.class.getResource("/Wk00.png"));
+//    public static int Promotion(JButton boton){
+//        //////CORONACIÓN
+//        Object[] opciones = {
+//            new JLabel(reinaIcon),
+//            new JLabel(torreIcon),
+//            new JLabel(alfilIcon),
+//            new JLabel(caballoIcon)
+//        };
+//        int seleccion=5;
+//        if(Memory.toPromote){
+//                seleccion = JOptionPane.showOptionDialog(
+//                null,
+//                "Elige una pieza para la promoción:",
+//                "Promoción de Peón",
+//                JOptionPane.DEFAULT_OPTION,
+//                JOptionPane.PLAIN_MESSAGE,
+//                null,
+//                opciones,
+//                null
+//        );}
+//            
+//            return seleccion;
+//    }
 }

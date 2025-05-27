@@ -16,7 +16,7 @@ import javax.swing.JButton;
  * @author technologyrooms
  */
 public class NewJFramePrincipal extends javax.swing.JFrame {
-
+    public static String addProm="";
     public static int action = 0;
 
     /**
@@ -24,7 +24,23 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
      */
     public NewJFramePrincipal() {
         initComponents();
+        setIcons();
         setHashMap();
+    }
+    
+        public void setIcons(){
+    Memory.iconos[0]=jButton5.getIcon();
+    Memory.iconos[1]=jButton6.getIcon();
+    Memory.iconos[2]=jButton7.getIcon();
+    Memory.iconos[3]=jButton8.getIcon();
+    Memory.iconos[4]=jButton9.getIcon();
+    Memory.iconos[5]=jButton13.getIcon();
+    Memory.iconos[6]=jButton68.getIcon();
+    Memory.iconos[7]=jButton67.getIcon();
+    Memory.iconos[8]=jButton66.getIcon();
+    Memory.iconos[9]=jButton65.getIcon();
+    Memory.iconos[10]=jButton64.getIcon();
+    Memory.iconos[11]=jButton60.getIcon();
     }
 
     public void setHashMap() {
@@ -178,6 +194,11 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
         Resign = new javax.swing.JButton();
         GoHome = new javax.swing.JButton();
         Rewind = new javax.swing.JButton();
+        promotionButton = new javax.swing.JButton();
+        reinaButton = new javax.swing.JButton();
+        torreButton = new javax.swing.JButton();
+        alfilButton = new javax.swing.JButton();
+        caballoButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -682,6 +703,41 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
             }
         });
 
+        promotionButton.setText("Promote");
+        promotionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                promotionButtonActionPerformed(evt);
+            }
+        });
+
+        reinaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Wq00.png"))); // NOI18N
+        reinaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reinaButtonActionPerformed(evt);
+            }
+        });
+
+        torreButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Wr00.png"))); // NOI18N
+        torreButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                torreButtonActionPerformed(evt);
+            }
+        });
+
+        alfilButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Wb00.png"))); // NOI18N
+        alfilButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alfilButtonActionPerformed(evt);
+            }
+        });
+
+        caballoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Wk00.png"))); // NOI18N
+        caballoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                caballoButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -821,47 +877,49 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
                             .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(70, 70, 70)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Resign)
-                    .addComponent(GoHome)
-                    .addComponent(Rewind))
-                .addContainerGap(72, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Resign)
+                            .addComponent(GoHome)
+                            .addComponent(Rewind)
+                            .addComponent(promotionButton)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(alfilButton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(reinaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(torreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(caballoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton61, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton62, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton64, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton65, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton66, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton67, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton68, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton60, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton59, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton58, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton57, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton56, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton55, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton54, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(Rewind)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Resign)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(GoHome)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jButton61, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton62, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton64, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton65, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton66, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton67, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton68, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton60, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton59, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton58, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton57, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton56, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton55, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton54, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton45, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton46, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -922,6 +980,24 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(Rewind)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Resign)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(GoHome)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(promotionButton)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(reinaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(torreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(alfilButton, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(caballoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -1287,10 +1363,62 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
         }}
     }//GEN-LAST:event_RewindActionPerformed
 
+    private void promotionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_promotionButtonActionPerformed
+
+        Memory.toPromote=true;
+        reinaButton.setVisible(true);
+        torreButton.setVisible(true);
+        alfilButton.setVisible(true);
+        caballoButton.setVisible(true);
+        
+    }//GEN-LAST:event_promotionButtonActionPerformed
+
+    private void reinaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reinaButtonActionPerformed
+        // TODO add your handling code here:
+        addProm="q";
+        
+        reinaButton.setVisible(false);
+        torreButton.setVisible(false);
+        alfilButton.setVisible(false);
+        caballoButton.setVisible(false);
+    }//GEN-LAST:event_reinaButtonActionPerformed
+
+    private void torreButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_torreButtonActionPerformed
+        // TODO add your handling code here:
+        addProm="r";
+        
+        reinaButton.setVisible(false);
+        torreButton.setVisible(false);
+        alfilButton.setVisible(false);
+        caballoButton.setVisible(false);
+    }//GEN-LAST:event_torreButtonActionPerformed
+
+    private void alfilButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alfilButtonActionPerformed
+        // TODO add your handling code here:
+        addProm="b";
+        
+        reinaButton.setVisible(false);
+        torreButton.setVisible(false);
+        alfilButton.setVisible(false);
+        caballoButton.setVisible(false);
+    }//GEN-LAST:event_alfilButtonActionPerformed
+
+    private void caballoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caballoButtonActionPerformed
+        // TODO add your handling code here:
+        addProm="k";
+        
+        reinaButton.setVisible(false);
+        torreButton.setVisible(false);
+        alfilButton.setVisible(false);
+        caballoButton.setVisible(false);
+    }//GEN-LAST:event_caballoButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton GoHome;
     private javax.swing.JButton Resign;
     private javax.swing.JButton Rewind;
+    private javax.swing.JButton alfilButton;
+    private javax.swing.JButton caballoButton;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -1355,5 +1483,8 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JButton promotionButton;
+    private javax.swing.JButton reinaButton;
+    private javax.swing.JButton torreButton;
     // End of variables declaration//GEN-END:variables
 }

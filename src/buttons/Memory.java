@@ -25,6 +25,8 @@ public class Memory {
     public static String text = "";
     public static HashMap<String, JButton> names = new HashMap<String, JButton>();
     public static ArrayList<Icon[]> posiciones = new ArrayList<>();
+    public static boolean toPromote=false;
+    public static Icon[] iconos=new Icon[12];
 
     public static void guardarPosicion() {
         Icon[] Pos = new Icon[64];
