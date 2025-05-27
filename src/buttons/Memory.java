@@ -27,6 +27,7 @@ public class Memory {
     public static ArrayList<Icon[]> posiciones = new ArrayList<>();
     public static boolean toPromote=false;
     public static Icon[] iconos=new Icon[12];
+    public static int LEVELorELO=1500;
 
     public static void guardarPosicion() {
         Icon[] Pos = new Icon[64];

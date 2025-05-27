@@ -27,6 +27,7 @@ public class Function {
     public static UciResult res=null;
     public static String st1="";
     public static String st2="";
+    public static String stPromPiece="";
     public static Icon st1Icon =null;
     //public static Icon st2Icon =null;
     public static boolean stockfishplayed=false;
@@ -131,6 +132,35 @@ public class Function {
             st1Icon=null;
             //boton1=null;
             //Memory.rewindMaked=false;
+        }else{
+         if(res != null && res.bestMove.length()==5&&stockfishplayed==true){
+             st1=res.bestMove.substring(0,2);
+             st2=res.bestMove.substring(2,4);
+             stPromPiece=res.bestMove.substring(4);
+             System.out.println("1:"+st1);
+             System.out.println("2:"+st2);
+             System.out.println("stP:"+stPromPiece);
+             Memory.names.get(st1).setIcon(null);
+             if(stPromPiece.equals("q")){
+                 Memory.names.get(st2).setIcon(Memory.iconos[10]);
+             }
+             if(stPromPiece.equals("r")){
+                 Memory.names.get(st2).setIcon(Memory.iconos[6]);
+             }
+             if(stPromPiece.equals("b")){
+                 Memory.names.get(st2).setIcon(Memory.iconos[8]);
+             }
+             if(stPromPiece.equals("k")){
+                 Memory.names.get(st2).setIcon(Memory.iconos[7]);
+             }
+             ////FALTAN LAS CONDICIONES PARA LAS OTRAS PIEZAS
+             stockfishplayed=false;
+             Memory.guardarPosicion();
+             st1="";
+             st2="";
+             stPromPiece="";
+             st1Icon=null;
+        }
         }
         //System.out.println("iconG:"+iconG);
         //System.out.println("boton1:"+boton1);

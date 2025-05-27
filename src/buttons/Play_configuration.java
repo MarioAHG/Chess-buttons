@@ -57,7 +57,7 @@ public class Play_configuration extends javax.swing.JFrame {
             }
         });
 
-        elo.setModel(new javax.swing.SpinnerNumberModel(1500, 1350, 2850, 10));
+        elo.setModel(new javax.swing.SpinnerNumberModel(1500, 1350, 2850, 50));
         elo.setOpaque(true);
         elo.setValue(1500);
 
@@ -134,8 +134,9 @@ public class Play_configuration extends javax.swing.JFrame {
     private void PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayActionPerformed
         if(Color!=null){
         int level = (Integer) elo.getValue();
+        Memory.LEVELorELO=level;
         try {
-        Memory.engine = new UCI("\"C:\\Users\\Mario\\Desktop\\Mario X\\Programación\\Chess-buttons\\src\\resources\\stockfish\\stockfish-windows-x86-64-avx2.exe\"");
+        Memory.engine = new UCI("\"C:\\Users\\Technologyrooms\\Documents\\NetBeansProjects\\Chess-buttons\\src\\resources\\stockfish\\stockfish-windows-x86-64-avx2.exe\"");
         Memory.engine.init();
         Memory.engine.setElo(level);
         Memory.gameId = Memory.engine.createGame();
@@ -144,7 +145,8 @@ public class Play_configuration extends javax.swing.JFrame {
         jLabel3.setText("");
         if(Color=="White"){
         Memory.PlayView.setVisible(true);
-        Color=null;}
+        Color=null;
+        System.out.println(Memory.names.get("e4").getName());}
         } catch (Exception ex) {
             Logger.getLogger(Play_configuration.class.getName()).log(Level.SEVERE, null, ex);
         }

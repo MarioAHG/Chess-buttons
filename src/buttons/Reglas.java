@@ -29,14 +29,20 @@ public class Reglas {
 ////            if((boton1.getName()+boton2.getName()).equals("e8g8")){System.out.println("ENTRÓ EN LA PRIMERA");}
 ////            if(((ImageIcon)boton1.getIcon()).getDescription().contains("Bki00.png")){System.out.println("ENTRÓ EN LA SEGUNDA");}
 ////            if(((ImageIcon) Memory.names.get("h8").getIcon()).getDescription().contains("Br00.png")){System.out.println("ENTRÓ EN LA TERCERA");}
-            if((boton1.getName()+boton2.getName()).equals("e8g8")&& ((ImageIcon)boton1.getIcon()).getDescription().contains("Bki00.png")&&((ImageIcon) Memory.names.get("h8").getIcon()).getDescription().contains("Br00.png")){
-                 System.out.println("ENTERED");
-                 System.out.println(Function.st1);
-                 System.out.println(Function.st2);
+//// EL ERROR ERA PORQUE NO SE HABÍAN DECLARADO LOS BOTONES
+//// CONDICIÓN ANTERIOR:
+//// if((boton1.getName()+boton2.getName()).equals("e8g8")&& ((ImageIcon)boton1.getIcon()).getDescription().contains("Bki00.png")&&((ImageIcon) Memory.names.get("h8").getIcon()).getDescription().contains("Br00.png"))
+            if((Function.st1+Function.st2).equals("e8g8")&& ((ImageIcon) Memory.names.get("e8").getIcon()).getDescription().contains("Bki00.png")&&((ImageIcon) Memory.names.get("h8").getIcon()).getDescription().contains("Br00.png")){
+//                 System.outst2.println("ENTERED");
+//                 System.out.println(Function.st1);
+//                 System.out.println(Function.st2);
                 Memory.names.get("f8").setIcon( Memory.names.get("h8").getIcon());
                  Memory.names.get("h8").setIcon(null);        
             }
-            if((boton1.getName()+boton2.getName()).equals("e8c8")&& ((ImageIcon)boton1.getIcon()).getDescription().contains("Bki00.png")&&((ImageIcon) Memory.names.get("a8").getIcon()).getDescription().contains("Br00.png")){
+//// CONDICIÓN ANTERIOR:
+//// if((boton1.getName()+boton2.getName()).equals("e8c8")&& ((ImageIcon)boton1.getIcon()).getDescription().contains("Bki00.png")&&((ImageIcon) Memory.names.get("a8").getIcon()).getDescription().contains("Br00.png")){
+
+            if((Function.st1+Function.st2).equals("e8c8")&& ((ImageIcon) Memory.names.get("e8").getIcon()).getDescription().contains("Bki00.png")&&((ImageIcon) Memory.names.get("a8").getIcon()).getDescription().contains("Br00.png")){
                  Memory.names.get("d8").setIcon( Memory.names.get("a8").getIcon());
                  Memory.names.get("a8").setIcon(null);        
             }
