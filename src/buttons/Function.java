@@ -118,7 +118,7 @@ public class Function {
             System.out.println("1:"+st1);
             System.out.println("2:"+st2);
             //System.out.println(Memory.names.get(st1));
-            //Reglas.Castle(Memory.names.get("e8"),Memory.names.get("h8"));
+            Reglas.Castle(Memory.names.get(st1),Memory.names.get(st2));
             //Reglas.En(Memory.names.get(st1), Memory.names.get(st2));
             st1Icon=Memory.names.get(st1).getIcon();
             Memory.names.get(st1).setIcon(null);
@@ -126,6 +126,9 @@ public class Function {
             Memory.names.get(st2).setIcon(st1Icon);
             stockfishplayed=false;
             Memory.guardarPosicion();
+            st1="";
+            st2="";
+            st1Icon=null;
             //boton1=null;
             //Memory.rewindMaked=false;
         }

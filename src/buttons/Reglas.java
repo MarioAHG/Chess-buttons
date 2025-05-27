@@ -16,9 +16,6 @@ import javax.swing.JButton;
  */
 public class Reglas {
     public static void Castle(JButton boton1 , JButton boton2){
-        //LAS CORRECIONES FUERON:
-        //h1aa1(en condiciones)
-        //a1ah1(en condiciones)
           if((boton1.getName()+boton2.getName()).equals("e1g1")&& ((ImageIcon)boton1.getIcon()).getDescription().contains("Wki00.png")&&((ImageIcon) Memory.names.get("h1").getIcon()).getDescription().contains("Wr00.png")){
                 Memory.names.get("f1").setIcon( Memory.names.get("h1").getIcon());
                  Memory.names.get("h1").setIcon(null);        
@@ -27,8 +24,16 @@ public class Reglas {
                  Memory.names.get("d1").setIcon( Memory.names.get("a1").getIcon());
                  Memory.names.get("a1").setIcon(null);        
             }
+////            System.out.println("////////////////////////////////////"+Function.st1+Function.st2);
+////            System.out.println((boton1.getName()+boton2.getName()));
+////            if((boton1.getName()+boton2.getName()).equals("e8g8")){System.out.println("ENTRÓ EN LA PRIMERA");}
+////            if(((ImageIcon)boton1.getIcon()).getDescription().contains("Bki00.png")){System.out.println("ENTRÓ EN LA SEGUNDA");}
+////            if(((ImageIcon) Memory.names.get("h8").getIcon()).getDescription().contains("Br00.png")){System.out.println("ENTRÓ EN LA TERCERA");}
             if((boton1.getName()+boton2.getName()).equals("e8g8")&& ((ImageIcon)boton1.getIcon()).getDescription().contains("Bki00.png")&&((ImageIcon) Memory.names.get("h8").getIcon()).getDescription().contains("Br00.png")){
-                 Memory.names.get("f8").setIcon( Memory.names.get("h8").getIcon());
+                 System.out.println("ENTERED");
+                 System.out.println(Function.st1);
+                 System.out.println(Function.st2);
+                Memory.names.get("f8").setIcon( Memory.names.get("h8").getIcon());
                  Memory.names.get("h8").setIcon(null);        
             }
             if((boton1.getName()+boton2.getName()).equals("e8c8")&& ((ImageIcon)boton1.getIcon()).getDescription().contains("Bki00.png")&&((ImageIcon) Memory.names.get("a8").getIcon()).getDescription().contains("Br00.png")){
