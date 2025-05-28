@@ -275,5 +275,17 @@ public class UCI {
         moves.remove(moves.size()-1);
         //System.out.println(moves);
     }
+    
+    public void saveMatch(String gameId){
+     GameState gs = games.get(gameId);
+        if (gs == null) throw new IllegalArgumentException("Unknown game ID: " + gameId);
+        List<String> moves = gs.moves;
+        for(int i=0;i<moves.size();i++){
+            if(i!=moves.size()-1){
+            Memory.movesMatch=Memory.movesMatch+moves.get(i)+",";
+            }else{
+            Memory.movesMatch=Memory.movesMatch+moves.get(i);}
+        }
+    }
 }
 

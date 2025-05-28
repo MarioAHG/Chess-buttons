@@ -5,6 +5,7 @@ import java.util.HashMap;
 import javax.swing.Icon;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -19,6 +20,7 @@ public class Memory {
     public static javax.swing.JFrame PlayView = null;
     public static javax.swing.JFrame pConfView = null;
     public static javax.swing.JFrame HomeView = null;
+    public static javax.swing.JFrame RevView=null;
     public static UCI engine = null;
     public static String gameId = null;
     //public static String text="position startpos moves";
@@ -28,7 +30,8 @@ public class Memory {
     public static boolean toPromote=false;
     public static Icon[] iconos=new Icon[12];
     public static int LEVELorELO=1500;
-
+    public static HashMap<String, JLabel> adds = new HashMap<String, JLabel>();
+    public static String movesMatch="";
     public static void guardarPosicion() {
         Icon[] Pos = new Icon[64];
         int i = 0;

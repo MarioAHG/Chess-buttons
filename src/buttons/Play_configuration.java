@@ -133,10 +133,11 @@ public class Play_configuration extends javax.swing.JFrame {
 
     private void PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayActionPerformed
         if(Color!=null){
+        if(NewJFramePrincipal.action==0){
         int level = (Integer) elo.getValue();
         Memory.LEVELorELO=level;
         try {
-        Memory.engine = new UCI("\"C:\\Users\\Technologyrooms\\Documents\\NetBeansProjects\\Chess-buttons\\src\\resources\\stockfish\\stockfish-windows-x86-64-avx2.exe\"");
+        Memory.engine = new UCI("\"C:\\Users\\Mario\\Desktop\\Mario X\\Programación\\Chess-buttons\\src\\resources\\stockfish\\stockfish-windows-x86-64-avx2.exe\"");
         Memory.engine.init();
         Memory.engine.setElo(level);
         Memory.gameId = Memory.engine.createGame();
@@ -146,10 +147,16 @@ public class Play_configuration extends javax.swing.JFrame {
         if(Color=="White"){
         Memory.PlayView.setVisible(true);
         Color=null;
-        System.out.println(Memory.names.get("e4").getName());}
+        Memory.adds.get("labelElo").setText(String.valueOf(Memory.LEVELorELO));
+        //System.out.println(Memory.names.get("e4").getName());
+        }
         } catch (Exception ex) {
             Logger.getLogger(Play_configuration.class.getName()).log(Level.SEVERE, null, ex);
         }
+        }else{
+        this.setVisible(false);
+        Memory.PlayView.setVisible(true);
+        Color=null;}
         }else{
             jLabel3.setText("(Select a color)");
         }

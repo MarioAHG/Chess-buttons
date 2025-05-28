@@ -64,6 +64,7 @@ public class Home extends javax.swing.JFrame {
         if(NewJFramePrincipal.action==0){
             Function.iconG=null;
             Function.boton1=null;
+            Memory.posiciones.clear();
             //Function.botonGuardado2=null;
             //Function.botonGuardado1=null;
             Memory.PlayView = new NewJFramePrincipal();
