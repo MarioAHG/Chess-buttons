@@ -59,19 +59,33 @@ public class Home extends javax.swing.JFrame {
 
     private void PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayActionPerformed
         // TODO add your handling code here:
-        
-        Memory.pConfView= new Play_configuration();
-        if(NewJFramePrincipal.action==0){
-            Function.iconG=null;
-            Function.boton1=null;
+
+        Memory.pConfView = new Play_configuration();
+        if (NewJFramePrincipal.action == 0) {
+            Function.iconG = null;
+            Function.boton1 = null;
             Memory.posiciones.clear();
             //Function.botonGuardado2=null;
             //Function.botonGuardado1=null;
             Memory.PlayView = new NewJFramePrincipal();
-        }else{}
+        } else {
+        }
         Memory.HomeView = this;
         this.setVisible(false);
         Memory.pConfView.setVisible(true);
+        ////NEGRAS (NO IMPORTA QUE SE REPITA CÓDIGO)
+        Memory.pConfView=new Play_configuration();
+        if (TableroNegras.Naction == 0) { 
+            ////FALTA CONFIGURAR LAS COSAS DE NFUNCTION
+            NFunction.NiconG = null;
+            NFunction.Nboton1 = null;
+            NMemory.Nposiciones.clear();
+            NMemory.NPlayView = new TableroNegras();
+            
+        }else{}
+        //NMemory.NHomeView=this;
+        this.setVisible(false);
+        //NMemory.NpConfView.setVisible(true);
         
     }//GEN-LAST:event_PlayActionPerformed
 

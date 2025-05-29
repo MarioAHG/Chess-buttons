@@ -39,6 +39,14 @@ public class Reglas {
                 Memory.names.get("f8").setIcon( Memory.names.get("h8").getIcon());
                  Memory.names.get("h8").setIcon(null);        
             }
+            
+              if((Function.st1+Function.st2).equals("e1g1")&& ((ImageIcon) Memory.names.get("e1").getIcon()).getDescription().contains("Wki00.png")&&((ImageIcon) Memory.names.get("h1").getIcon()).getDescription().contains("Wr00.png")){
+//                 System.outst2.println("ENTERED");
+//                 System.out.println(Function.st1);
+//                 System.out.println(Function.st2);
+                Memory.names.get("f1").setIcon( Memory.names.get("h1").getIcon());
+                 Memory.names.get("h1").setIcon(null);        
+            }
 //// CONDICIÓN ANTERIOR:
 //// if((boton1.getName()+boton2.getName()).equals("e8c8")&& ((ImageIcon)boton1.getIcon()).getDescription().contains("Bki00.png")&&((ImageIcon) Memory.names.get("a8").getIcon()).getDescription().contains("Br00.png")){
 
@@ -46,16 +54,55 @@ public class Reglas {
                  Memory.names.get("d8").setIcon( Memory.names.get("a8").getIcon());
                  Memory.names.get("a8").setIcon(null);        
             }
+            
+            if((Function.st1+Function.st2).equals("e1c1")&& ((ImageIcon) Memory.names.get("e1").getIcon()).getDescription().contains("Wki00.png")&&((ImageIcon) Memory.names.get("a1").getIcon()).getDescription().contains("Wr00.png")){
+                 Memory.names.get("d1").setIcon( Memory.names.get("a1").getIcon());
+                 Memory.names.get("a1").setIcon(null);        
+            }
 
     }
     
     public static void En(JButton boton1 , JButton boton2){
+        if(Function.st1.equals("")&& Function.st2.equals("")){
         if( !(boton1.getName().substring(0, 1).equals(boton2.getName().substring(0, 1))) &&
 
             ((ImageIcon)boton1.getIcon()).getDescription().contains("Wp00.png") &&
                     boton2.getIcon()== null){
                        Memory.names.get(boton2.getName().substring(0, 1)+(Integer.parseInt(boton2.getName().substring(1, 2))-1 )).setIcon(null);
             }
+        
+         if( !(boton1.getName().substring(0, 1).equals(boton2.getName().substring(0, 1))) &&
+
+            ((ImageIcon)boton1.getIcon()).getDescription().contains("Bp00.png") &&
+                    boton2.getIcon()== null){
+                       Memory.names.get(boton2.getName().substring(0, 1)+(Integer.parseInt(boton2.getName().substring(1, 2))+1 )).setIcon(null);
+            }
+        }
+         
+         if(!Function.st1.equals("")&& !Function.st2.equals("")){
+             
+            
+                 System.out.println(Function.st2.substring(0, 1)+(Integer.parseInt(Function.st2.substring(1, 2))+1 )+ "Hola");
+                 if( !(Function.st1.substring(0, 1).equals(Function.st2.substring(0, 1))) &&
+
+            ((ImageIcon)Memory.names.get(Function.st1).getIcon()).getDescription().contains("Wp00.png") &&
+                    Memory.names.get(Function.st2).getIcon()== null){
+                       Memory.names.get(Function.st2.substring(0, 1)+(Integer.parseInt(Function.st2.substring(1, 2))-1 )).setIcon(null);
+            }
+           
+           if( !(Function.st1.substring(0, 1).equals(Function.st2.substring(0, 1))) &&
+
+            ((ImageIcon)Memory.names.get(Function.st1).getIcon()).getDescription().contains("Bp00.png") &&
+                    Memory.names.get(Function.st2).getIcon()== null){
+               
+                       Memory.names.get(Function.st2.substring(0, 1)+(Integer.parseInt(Function.st2.substring(1, 2))+1 )).setIcon(null);
+            }
+             
+                     
+             
+             
+             }
+           
 //         if(Function.st1!=null && Function.st2!=null){
 //        if( !(Memory.names.get(Function.st1).getName().substring(0, 1).equals(Memory.names.get(Function.st2).getName().substring(0, 1))) &&
 //

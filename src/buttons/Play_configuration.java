@@ -8,7 +8,6 @@ import java.util.logging.Logger;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author technologyrooms
@@ -21,7 +20,7 @@ public class Play_configuration extends javax.swing.JFrame {
     public Play_configuration() {
         initComponents();
     }
-    public static String Color=null;
+    public static String Color = null;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -119,49 +118,92 @@ public class Play_configuration extends javax.swing.JFrame {
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         buttonGroup1.add(jRadioButton2);
-        if(jRadioButton2.isSelected()){
-        Color="Black";
-                }
+        if (jRadioButton2.isSelected()) {
+            Color = "Black";
+        }
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         buttonGroup1.add(jRadioButton1);
-        if(jRadioButton1.isSelected()){
-        Color="White";
-                }
+        if (jRadioButton1.isSelected()) {
+            Color = "White";
+        }
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayActionPerformed
-        if(Color!=null){
-        if(NewJFramePrincipal.action==0){
-        int level = (Integer) elo.getValue();
-        Memory.LEVELorELO=level;
-        try {
-        Memory.engine = new UCI("\"C:\\Users\\Mario\\Desktop\\Mario X\\Programación\\Chess-buttons\\src\\resources\\stockfish\\stockfish-windows-x86-64-avx2.exe\"");
-        Memory.engine.init();
-        Memory.engine.setElo(level);
-        Memory.gameId = Memory.engine.createGame();
-        this.setVisible(false);
-        Memory.guardarPosicion();
-        jLabel3.setText("");
-        if(Color=="White"){
-        Memory.PlayView.setVisible(true);
-        Color=null;
-        Memory.adds.get("labelElo").setText(String.valueOf(Memory.LEVELorELO));
-        //System.out.println(Memory.names.get("e4").getName());
-        }
-        } catch (Exception ex) {
-            Logger.getLogger(Play_configuration.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        }else{
-        this.setVisible(false);
-        Memory.PlayView.setVisible(true);
-        Color=null;}
-        }else{
+        if (Color != null) {
+            if (Color.equals("White")) {
+                if (NewJFramePrincipal.action == 0) {
+                    int level = (Integer) elo.getValue();
+                    Memory.LEVELorELO = level;
+                    try {
+                        Memory.engine = new UCI("\"C:\\Users\\Mario\\Desktop\\Mario X\\Programación\\Chess-buttons\\src\\resources\\stockfish\\stockfish-windows-x86-64-avx2.exe\"");
+                        Memory.engine.init();
+                        Memory.engine.setElo(level);
+                        Memory.gameId = Memory.engine.createGame();
+                        this.setVisible(false);
+                        Memory.guardarPosicion();
+                        jLabel3.setText("");
+                        if (Color.equals("White")) {
+                            Memory.PlayView.setVisible(true);
+                            //Color = null;
+                            Memory.adds.get("labelElo").setText(String.valueOf(Memory.LEVELorELO));
+                            //System.out.println(Memory.names.get("e4").getName());
+                        }
+                    } catch (Exception ex) {
+                        Logger.getLogger(Play_configuration.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                } else {
+                    this.setVisible(false);
+                    //Color = null;
+                    Memory.PlayView.setVisible(true);
+                }
+            }
+            if (Color.equals("Black")) {
+                if (TableroNegras.Naction == 0) {
+                    int level = (Integer) elo.getValue();
+                    NMemory.NLEVELorELO = level;
+                    try {
+                        NMemory.Nengine = new UCI("\"C:\\Users\\Mario\\Desktop\\Mario X\\Programación\\Chess-buttons\\src\\resources\\stockfish\\stockfish-windows-x86-64-avx2.exe\"");
+                        NMemory.Nengine.init();
+                        NMemory.Nengine.setElo(level);
+                        NMemory.NgameId = NMemory.Nengine.createGame();
+                        /////////////////////////FIRSTMOVE
+                        NMemory.Nengine.makeMove(NMemory.NgameId, NMemory.Ntext);
+                        try {
+                     //Memory.engine.makeMove(Memory.gameId, Memory.text);
+                     NFunction.Nres = NMemory.Nengine.getBestMove(NMemory.NgameId, 1000);
+                     NMemory.Nengine.makeMove(NMemory.NgameId, NFunction.Nres.bestMove);
+                      NFunction.Nstockfishplayed=true;
+            } catch (IOException ex) {
+                Logger.getLogger(Function.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Function.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        /////////////////////////FIRSTMOVE
+                        this.setVisible(false);
+                        NMemory.NguardarPosicion();
+                        jLabel3.setText("");
+                        if (Color.equals("Black")) {
+                            NMemory.NPlayView.setVisible(true);
+                            //Color = null;
+                            NMemory.Nadds.get("NlabelElo").setText(String.valueOf(NMemory.NLEVELorELO));
+                            //System.out.println(Memory.names.get("e4").getName());
+                        }
+                    } catch (Exception ex) {
+                        Logger.getLogger(Play_configuration.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                } else {
+                    this.setVisible(false);
+                    //Color = null;
+                    NMemory.NPlayView.setVisible(true);
+                }
+            }
+        } else {
             jLabel3.setText("(Select a color)");
         }
+        Color="";
     }//GEN-LAST:event_PlayActionPerformed
-                                            
 
     /**
      * @param args the command line arguments

@@ -1,0 +1,90 @@
+NMemory.Niconos[0]=jButton5.getIcon();
+NMemory.Niconos[1]=jButton6.getIcon();
+NMemory.Niconos[2]=jButton7.getIcon();
+NMemory.Niconos[3]=jButton8.getIcon();
+NMemory.Niconos[4]=jButton9.getIcon();
+NMemory.Niconos[5]=jButton3.getIcon();
+NMemory.Niconos[6]=jButton68.getIcon();
+NMemory.Niconos[7]=jButton67.getIcon();
+NMemory.Niconos[8]=jButton6.getIcon();
+NMemory.Niconos[9]=jButton65.getIcon();
+NMemory.Niconos[10]=jButton64.getIcon();
+NMemory.Niconos[11]=jButton60.getIcon();
+
+
+
+
+
+
+
+        Memory.names.put("a1", jButton5);
+        Memory.names.put("b1", jButton6);
+        Memory.names.put("c1", jButton7);
+        Memory.names.put("d1", jButton8);
+        Memory.names.put("e1", jButton9);
+        Memory.names.put("f1", jButton10);
+        Memory.names.put("g1", jButton11);
+        Memory.names.put("h1", jButton12);
+
+        Memory.names.put("a2", jButton13);
+        Memory.names.put("b2", jButton14);
+        Memory.names.put("c2", jButton15);
+        Memory.names.put("d2", jButton16);
+        Memory.names.put("e2", jButton17);
+        Memory.names.put("f2", jButton18);
+        Memory.names.put("g2", jButton19);
+        Memory.names.put("h2", jButton20);
+
+        Memory.names.put("a3", jButton21);
+        Memory.names.put("b3", jButton22);
+        Memory.names.put("c3", jButton23);
+        Memory.names.put("d3", jButton24);
+        Memory.names.put("e3", jButton25);
+        Memory.names.put("f3", jButton26);
+        Memory.names.put("g3", jButton27);
+        Memory.names.put("h3", jButton28);
+
+        Memory.names.put("a4", jButton29);
+        Memory.names.put("b4", jButton30);
+        Memory.names.put("c4", jButton31);
+        Memory.names.put("d4", jButton32);
+        Memory.names.put("e4", jButton33);
+        Memory.names.put("f4", jButton34);
+        Memory.names.put("g4", jButton35);
+        Memory.names.put("h4", jButton36);
+
+        Memory.names.put("a5", jButton37);
+        Memory.names.put("b5", jButton38);
+        Memory.names.put("c5", jButton39);
+        Memory.names.put("d5", jButton40);
+        Memory.names.put("e5", jButton41);
+        Memory.names.put("f5", jButton42);
+        Memory.names.put("g5", jButton43);
+        Memory.names.put("h5", jButton44);
+
+        Memory.names.put("a6", jButton45);
+        Memory.names.put("b6", jButton46);
+        Memory.names.put("c6", jButton47);
+        Memory.names.put("d6", jButton48);
+        Memory.names.put("e6", jButton49);
+        Memory.names.put("f6", jButton50);
+        Memory.names.put("g6", jButton51);
+        Memory.names.put("h6", jButton52);
+
+        Memory.names.put("a7", jButton53);
+        Memory.names.put("b7", jButton54);
+        Memory.names.put("c7", jButton55);
+        Memory.names.put("d7", jButton56);
+        Memory.names.put("e7", jButton57);
+        Memory.names.put("f7", jButton58);
+        Memory.names.put("g7", jButton59);
+        Memory.names.put("h7", jButton60);
+
+        Memory.names.put("a8", jButton61);
+        Memory.names.put("b8", jButton62);
+        Memory.names.put("c8", jButton63);
+        Memory.names.put("d8", jButton64);
+        Memory.names.put("e8", jButton65);
+        Memory.names.put("f8", jButton66);
+        Memory.names.put("g8", jButton67);
+        Memory.names.put("h8", jButton68);

@@ -1,0 +1,71 @@
+NMemory.Nnames.put("a1", jButton5);
+NMemory.Nnames.put("b1", jButton6);
+NMemory.Nnames.put("c1", jButton7);
+NMemory.Nnames.put("d1", jButton8);
+NMemory.Nnames.put("e1", jButton9);
+NMemory.Nnames.put("f1", jButton10);
+NMemory.Nnames.put("g1", jButton11);
+NMemory.Nnames.put("h1", jButton12);
+
+NMemory.Nnames.put("a2", jButton13);
+NMemory.Nnames.put("b2", jButton14);
+NMemory.Nnames.put("c2", jButton15);
+NMemory.Nnames.put("d2", jButton16);
+NMemory.Nnames.put("e2", jButton17);
+NMemory.Nnames.put("f2", jButton18);
+NMemory.Nnames.put("g2", jButton19);
+NMemory.Nnames.put("h2", jButton20);
+
+NMemory.Nnames.put("a3", jButton21);
+NMemory.Nnames.put("b3", jButton22);
+NMemory.Nnames.put("c3", jButton23);
+NMemory.Nnames.put("d3", jButton24);
+NMemory.Nnames.put("e3", jButton25);
+NMemory.Nnames.put("f3", jButton26);
+NMemory.Nnames.put("g3", jButton27);
+NMemory.Nnames.put("h3", jButton28);
+
+NMemory.Nnames.put("a4", jButton29);
+NMemory.Nnames.put("b4", jButton30);
+NMemory.Nnames.put("c4", jButton31);
+NMemory.Nnames.put("d4", jButton32);
+NMemory.Nnames.put("e4", jButton33);
+NMemory.Nnames.put("f4", jButton34);
+NMemory.Nnames.put("g4", jButton35);
+NMemory.Nnames.put("h4", jButton36);
+
+NMemory.Nnames.put("a5", jButton37);
+NMemory.Nnames.put("b5", jButton38);
+NMemory.Nnames.put("c5", jButton39);
+NMemory.Nnames.put("d5", jButton40);
+NMemory.Nnames.put("e5", jButton41);
+NMemory.Nnames.put("f5", jButton42);
+NMemory.Nnames.put("g5", jButton43);
+NMemory.Nnames.put("h5", jButton44);
+
+NMemory.Nnames.put("a6", jButton45);
+NMemory.Nnames.put("b6", jButton46);
+NMemory.Nnames.put("c6", jButton47);
+NMemory.Nnames.put("d6", jButton48);
+NMemory.Nnames.put("e6", jButton49);
+NMemory.Nnames.put("f6", jButton50);
+NMemory.Nnames.put("g6", jButton51);
+NMemory.Nnames.put("h6", jButton52);
+
+NMemory.Nnames.put("a7", jButton53);
+NMemory.Nnames.put("b7", jButton54);
+NMemory.Nnames.put("c7", jButton55);
+NMemory.Nnames.put("d7", jButton56);
+NMemory.Nnames.put("e7", jButton57);
+NMemory.Nnames.put("f7", jButton58);
+NMemory.Nnames.put("g7", jButton59);
+NMemory.Nnames.put("h7", jButton60);
+
+NMemory.Nnames.put("a8", jButton61);
+NMemory.Nnames.put("b8", jButton62);
+NMemory.Nnames.put("c8", jButton63);
+NMemory.Nnames.put("d8", jButton64);
+NMemory.Nnames.put("e8", jButton65);
+NMemory.Nnames.put("f8", jButton66);
+NMemory.Nnames.put("g8", jButton67);
+NMemory.Nnames.put("h8", jButton68);

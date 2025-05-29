@@ -120,7 +120,12 @@ public class Function {
             System.out.println("2:"+st2);
             //System.out.println(Memory.names.get(st1));
             Reglas.Castle(Memory.names.get(st1),Memory.names.get(st2));
-            //Reglas.En(Memory.names.get(st1), Memory.names.get(st2));
+            
+//            try{Reglas.En(Memory.names.get(st1), Memory.names.get(st2)); System.out.println("AHHHHHH");}catch(Exception e){
+//                System.out.println("Error");
+//            }
+            Reglas.En(Memory.names.get(st1),Memory.names.get(st2));
+            
             st1Icon=Memory.names.get(st1).getIcon();
             Memory.names.get(st1).setIcon(null);
             //st2Icon=Memory.names.get(st2).getIcon();
