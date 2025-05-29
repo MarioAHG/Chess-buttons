@@ -1491,7 +1491,7 @@ NMemory.Nnames.put("h8", jButton68);
         String two=NMemory.NfirstMove.substring(2);
         Icon ic=NMemory.Nnames.get(one).getIcon();
         NMemory.Nnames.get(one).setIcon(null);
-        NMemory.Nnames.get(one).setIcon(ic);
+        NMemory.Nnames.get(two).setIcon(ic);
     }//GEN-LAST:event_startMatchActionPerformed
 
     /**
