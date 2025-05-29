@@ -45,7 +45,7 @@ public class NMemory {
         
         boolean res=false;
         if(boton.getIcon()!=null&&boton1!=null){
-        if(((ImageIcon)boton.getIcon()).getDescription().contains("Wp00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Wk00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Wb00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Wq00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Wr00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Wki00.png")){
+        if(((ImageIcon)boton.getIcon()).getDescription().contains("Bp00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Bk00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Bb00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Bq00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Br00.png")||((ImageIcon)boton.getIcon()).getDescription().contains("Bki00.png")){
             res=true;
         }}
         return res;

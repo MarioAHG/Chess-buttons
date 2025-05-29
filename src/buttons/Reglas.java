@@ -158,4 +158,31 @@ public class Reglas {
 //            
 //            return seleccion;
 //    }
+    
+    public static void NCastle(JButton boton1 , JButton boton2){
+          if((boton1.getName()+boton2.getName()).equals("e8g8")&& ((ImageIcon)boton1.getIcon()).getDescription().contains("Bki00.png")&&((ImageIcon) NMemory.Nnames.get("h8").getIcon()).getDescription().contains("Br00.png")){
+                NMemory.Nnames.get("f8").setIcon( NMemory.Nnames.get("h8").getIcon());
+                 NMemory.Nnames.get("h8").setIcon(null);        
+            }
+            if((boton1.getName()+boton2.getName()).equals("e8c8")&& ((ImageIcon)boton1.getIcon()).getDescription().contains("Bki00.png")&&((ImageIcon) NMemory.Nnames.get("a8").getIcon()).getDescription().contains("Br00.png")){
+                 NMemory.Nnames.get("d8").setIcon( NMemory.Nnames.get("a8").getIcon());
+                 NMemory.Nnames.get("a8").setIcon(null);        
+            }
+
+            if((NFunction.Nst1+NFunction.Nst2).equals("e1g1")&& ((ImageIcon) NMemory.Nnames.get("e1").getIcon()).getDescription().contains("Wki00.png")&&((ImageIcon) NMemory.Nnames.get("h1").getIcon()).getDescription().contains("Wr00.png")){
+
+                NMemory.Nnames.get("f1").setIcon( NMemory.Nnames.get("h1").getIcon());
+                 NMemory.Nnames.get("h1").setIcon(null);        
+            }
+            
+//              if((Function.st1+Function.st2).equals("e1g1")&& ((ImageIcon) Memory.names.get("e1").getIcon()).getDescription().contains("Wki00.png")&&((ImageIcon) Memory.names.get("h1").getIcon()).getDescription().contains("Wr00.png")){
+//
+//                Memory.names.get("f1").setIcon( Memory.names.get("h1").getIcon());
+//                 Memory.names.get("h1").setIcon(null);        
+//            }
+
+            if((NFunction.Nst1+NFunction.Nst2).equals("e1c1")&& ((ImageIcon) NMemory.Nnames.get("e1").getIcon()).getDescription().contains("Wki00.png")&&((ImageIcon) NMemory.Nnames.get("a1").getIcon()).getDescription().contains("Wr00.png")){
+                 NMemory.Nnames.get("d1").setIcon( NMemory.Nnames.get("a1").getIcon());
+                 NMemory.Nnames.get("a1").setIcon(null);        
+            }}
 }
