@@ -6,11 +6,11 @@ package buttons;
 
 import buttons.UCI.UciResult;
 import java.io.IOException;
-import java.lang.System.Logger;
-import java.lang.System.Logger.Level;
 import javax.swing.Icon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -26,7 +26,7 @@ public class NFunction {
     public static String NstPromPiece="";
     public static Icon Nst1Icon =null;
     public static boolean Nstockfishplayed=false;
-    public static void FunctionOfButtons(JButton boton2) throws IOException, InterruptedException {
+    public static void FunctionOfButtons(JButton boton2) {
         boolean Nbo=false;
         if(Nboton1!=null){
             Nbo=NMemory.contieneNegra(boton2,Nboton1);
@@ -41,10 +41,10 @@ public class NFunction {
             System.out.println("///////////"+Memory.text);
             NMemory.Nengine.makeMove(NMemory.NgameId, NMemory.Ntext);
             ////////CORONACIÓN
-            if(NMemory.Nengine.ilegalmoves(NMemory.NgameId)==false){
-            Reglas.NCastle(Nboton1, boton2);
-            Reglas.En(Nboton1, boton2);
-            Reglas.Promotion(boton2);
+            if(NMemory.Nengine.Nilegalmoves(NMemory.NgameId)==false){
+//            Reglas.NCastle(Nboton1, boton2);
+//            Reglas.En(Nboton1, boton2);
+//            Reglas.Promotion(boton2);
             if(NMemory.NtoPromote){
                 TableroNegras.NaddProm="";
                 NMemory.NtoPromote=false;
@@ -54,15 +54,15 @@ public class NFunction {
             Nboton1.setIcon(null);
             Nboton1=null;
             System.out.println(NMemory.Ntext);
-//            try {
+            try {
                 Nres = NMemory.Nengine.getBestMove(NMemory.NgameId, 1000);
                 NMemory.Nengine.makeMove(NMemory.NgameId, Nres.bestMove);
                 Nstockfishplayed=true;
-//            } catch (IOException ex) {
-//                Logger.getLogger(NFunction.class.getName()).log(Level.SEVERE, null, ex);
-//            } catch (InterruptedException ex) {
-//                Logger.getLogger(NFunction.class.getName()).log(Level.SEVERE, null, ex);
-//            }
+            } catch (IOException ex) {
+                Logger.getLogger(NFunction.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(NFunction.class.getName()).log(Level.SEVERE, null, ex);
+            }
             /////////////////
             System.out.println("st:"+Nres.bestMove);
             //System.out.println("gid:"+Memory.gameId);
@@ -99,8 +99,8 @@ public class NFunction {
             System.out.println("1:"+Nst1);
             System.out.println("2:"+Nst2);
             //System.out.println(Memory.names.get(st1));
-            Reglas.NCastle(NMemory.Nnames.get(Nst1),NMemory.Nnames.get(Nst2));
-            Reglas.En(NMemory.Nnames.get(Nst1),NMemory.Nnames.get(Nst2));
+//            Reglas.NCastle(NMemory.Nnames.get(Nst1),NMemory.Nnames.get(Nst2));
+//            Reglas.En(NMemory.Nnames.get(Nst1),NMemory.Nnames.get(Nst2));
             
             Nst1Icon=NMemory.Nnames.get(Nst1).getIcon();
             NMemory.Nnames.get(Nst1).setIcon(null);
@@ -128,7 +128,7 @@ public class NFunction {
              if(NstPromPiece.equals("b")){
                  NMemory.Nnames.get(Nst2).setIcon(NMemory.Niconos[8]);
              }
-             if(NstPromPiece.equals("k")){
+             if(NstPromPiece.equals("n")){
                  NMemory.Nnames.get(Nst2).setIcon(NMemory.Niconos[7]);
              }
              

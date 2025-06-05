@@ -155,7 +155,7 @@ public class Function {
              if(stPromPiece.equals("b")){
                  Memory.names.get(st2).setIcon(Memory.iconos[8]);
              }
-             if(stPromPiece.equals("k")){
+             if(stPromPiece.equals("n")){
                  Memory.names.get(st2).setIcon(Memory.iconos[7]);
              }
              ////FALTAN LAS CONDICIONES PARA LAS OTRAS PIEZAS

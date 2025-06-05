@@ -123,7 +123,7 @@ public class Reglas {
          if(NewJFramePrincipal.addProm.equals("r")){
         boton2.setIcon(Memory.iconos[0]);
         }
-         if(NewJFramePrincipal.addProm.equals("k")){
+         if(NewJFramePrincipal.addProm.equals("n")){
         boton2.setIcon(Memory.iconos[1]);
         }
          if(NewJFramePrincipal.addProm.equals("b")){

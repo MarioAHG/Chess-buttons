@@ -1434,7 +1434,7 @@ public class NewJFramePrincipal extends javax.swing.JFrame {
 
     private void caballoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caballoButtonActionPerformed
         // TODO add your handling code here:
-        addProm="k";
+        addProm="n";
         
         reinaButton.setVisible(false);
         torreButton.setVisible(false);

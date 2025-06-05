@@ -21,6 +21,7 @@ public class Play_configuration extends javax.swing.JFrame {
         initComponents();
     }
     public static String Color = null;
+    public static String copyColor="";
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -174,7 +175,8 @@ public class Play_configuration extends javax.swing.JFrame {
                      //Memory.engine.makeMove(Memory.gameId, Memory.text);
                      NFunction.Nres = NMemory.Nengine.getBestMove(NMemory.NgameId, 1000);
                      NMemory.Nengine.makeMove(NMemory.NgameId, NFunction.Nres.bestMove);
-                      NFunction.Nstockfishplayed=true;
+                     ////DOWN CHANGED TO FALSE
+                      NFunction.Nstockfishplayed=false;
             } catch (IOException ex) {
                 Logger.getLogger(Function.class.getName()).log(Level.SEVERE, null, ex);
             } catch (InterruptedException ex) {
@@ -202,6 +204,7 @@ public class Play_configuration extends javax.swing.JFrame {
         } else {
             jLabel3.setText("(Select a color)");
         }
+        copyColor=Color;
         Color="";
     }//GEN-LAST:event_PlayActionPerformed
 

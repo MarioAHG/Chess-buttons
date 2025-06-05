@@ -266,6 +266,35 @@ public class UCI {
         }
         
     }
+    public boolean Nilegalmoves(String gameId){
+        try{
+        GameState gs = games.get(gameId);
+        if (gs == null) throw new IllegalArgumentException("Unknown game ID: " + gameId);
+        List<String> moves = gs.moves;
+        String lastMove=moves.get(moves.size()-1);
+        moves.remove(moves.size()-1);
+        List<String> tableroAnterior=getBoardDisplay(gameId);
+        NMemory.Nengine.makeMove(gameId, lastMove);
+        List<String> tableroActual=getBoardDisplay(gameId);
+        boolean eq=true;
+        for(int i=0;i<tableroAnterior.size();i++){
+            if(!tableroAnterior.get(i).equals(tableroActual.get(i))){
+                eq=false;
+            }
+        }
+        if(eq==true){
+           //System.out.println("Moves1:"+moves);
+            moves.remove(moves.size()-1);
+        }
+        //System.out.println("Moves2:"+moves);
+        return eq;
+        }catch( Exception e){
+            System.out.println("Error in legal moves");
+            System.out.println(e);
+            return true;
+        }
+        
+    }
     public void rewindCode(String gameId){
       GameState gs = games.get(gameId);
         if (gs == null) throw new IllegalArgumentException("Unknown game ID: " + gameId);
@@ -285,6 +314,17 @@ public class UCI {
             Memory.movesMatch=Memory.movesMatch+moves.get(i)+",";
             }else{
             Memory.movesMatch=Memory.movesMatch+moves.get(i);}
+        }
+    }
+    public void NsaveMatch(String gameId){
+     GameState gs = games.get(gameId);
+        if (gs == null) throw new IllegalArgumentException("Unknown game ID: " + gameId);
+        List<String> moves = gs.moves;
+        for(int i=0;i<moves.size();i++){
+            if(i!=moves.size()-1){
+            NMemory.NmovesMatch=NMemory.NmovesMatch+moves.get(i)+",";
+            }else{
+            NMemory.NmovesMatch=NMemory.NmovesMatch+moves.get(i);}
         }
     }
 }
